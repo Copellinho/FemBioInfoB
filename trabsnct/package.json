@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  },
+  "name": "trabatua",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "devDependencies": {
+    "vite": "^8.3.1"
+  },
+  "scripts": {
+    "frontend":"vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}

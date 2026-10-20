@@ -1,0 +1,441 @@
+html{
+  
+  font-size: clamp(16px, min(1.0417vw, 1.852vh), 72px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body{ overflow-x: hidden; }
+
+img, video{ max-width: 100%; }
+
+header,
+.femdesta,
+.placeholders{ width: 100%; }
+
+header{
+  height: auto;
+  min-height: max(20vh, 9.5rem);
+}
+
+a:focus-visible,
+button:focus-visible,
+video:focus-visible{
+  outline: 3px solid var(--lilas);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  .carousel-item{ transition: none !important; }
+}
+
+/* Botão hambúrguer: escondido no desktop */
+.menu-toggle{ display: none; }
+
+
+
+.placeholders .dialog,
+.placeholders #dialog2,
+.placeholders #dialog3{
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(34rem, 92vw);
+  max-width: 92vw;
+  height: fit-content;
+  max-height: 88vh;
+  overflow-y: auto;
+}
+
+.placeholders .dialog h1{
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  overflow-wrap: anywhere;
+}
+
+.placeholders .dialog p{ line-height: 1.55; }
+
+
+
+header .logo{
+  font-size: min(6rem, 6.25vw);
+  margin-top: 2.2rem;
+  margin-left: 1.25rem;
+}
+
+header .links{ height: 3.1rem; }
+header .links ul li{ width: 13.4rem; }
+header .links ul li:nth-child(4){ width: 11.25rem; }
+header .links a{
+  margin-top: 5rem;
+  width: 12.8rem;
+  padding: .625rem 0;
+  font-size: 1.25rem;
+}
+header .links ul ul li a{
+  margin-top: 0;
+  width: 15.6rem;
+  font-size: 1.125rem;
+}
+
+.banner .carousel-inner{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.banner img{ width: 100%; height: 70vh; }
+
+.banner .textoSlide{ top: 1.9rem; left: .6rem; padding: .6rem 1.25rem; }
+.banner .textoSlide h1{ height: 6.25rem; }
+.banner .textoSlide .futuro{ top: 16.9rem; margin-left: 2.8rem; }
+
+.banner .ElasBanner{
+  width: 31.25rem;
+  height: 12.5rem;
+  top: 1.9rem;
+  left: .9rem;
+  padding: 1.9rem 1.25rem;
+}
+.banner .carousel-inner .carousel-control-prev,
+.banner .carousel-inner .carousel-control-next{ top: 6.25rem; }
+
+
+.femdesta img{
+  width: auto;
+  height: min(43.75rem, 82vh);
+  aspect-ratio: 5 / 7;
+  object-fit: cover;
+  margin-left: 3.1rem;
+  margin-top: 3.1rem;
+  border-radius: 1.9rem;
+}
+.femdesta article{ padding: .6rem 3.1rem; }
+.femdesta article h1{ margin-top: 3.1rem; margin-bottom: 1.25rem; }
+.femdesta article .BtnDivFemDestaque{
+  width: auto;
+  min-width: 12rem;
+  margin-right: 13rem;
+  padding: .6rem .95rem;
+  border-radius: 1.05rem;
+  justify-content: center;
+}
+
+
+.placeholders{
+  height: auto;
+  min-height: 31rem;
+  padding: 2rem 5rem;
+  margin-top: 6.25rem;
+  margin-bottom: 4.4rem;
+  gap: 1.9rem;
+  align-items: flex-start;
+}
+.placeholders .card{
+  flex: 1 1 0;
+  width: 37.5rem;
+  max-width: 37.5rem;
+  min-width: 0;
+  padding: .6rem;
+}
+.placeholders img{
+  width: 100%;
+  max-width: 25rem;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-top: 1.25rem;
+  border-radius: 1.25rem;
+}
+
+
+.QuemAside .titulo{
+  display: block;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+
+
+@media (max-width: 1280px){
+
+ 
+  header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    min-height: 4.5rem;
+    padding: .5rem max(1rem, env(safe-area-inset-right)) .5rem max(1rem, env(safe-area-inset-left));
+  }
+  header .logo{
+    font-size: clamp(2.1rem, 8vw, 3.5rem);
+    margin: 0;
+    filter: none;
+  }
+
+  .menu-toggle{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--branco);
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: .6rem;
+    cursor: pointer;
+  }
+
+  header .links{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 4.5rem);
+    max-height: calc(100dvh - 4.5rem);
+    overflow-y: auto;
+    padding: .5rem 1rem 1rem;
+    background: rgba(13,11,38,.98);
+    border-bottom: 2px solid var(--roxo4);
+  }
+  header .links.aberto{ display: block; }
+
+  header .links ul{ width: 100%; padding: 0; margin: 0; }
+  header .links ul li,
+  header .links ul li:nth-child(4){ float: none; width: 100%; }
+  header .links > ul > li{ border-bottom: 1px solid rgba(255,255,255,.12); }
+
+  header .links a{
+    margin-top: 0;
+    width: 100%;
+    min-height: 48px;
+    padding: .85rem .5rem;
+    justify-content: flex-start;
+    font-size: 1.05rem;
+  }
+
+  header .links ul ul{
+    position: static;
+    visibility: visible;
+    padding: 0 0 .25rem 1rem;
+  }
+  header .links ul ul li a{
+    width: 100%;
+    font-size: .95rem;
+    background-color: transparent;
+  }
+
+  /* --- Banner --- */
+  .banner img{
+    height: clamp(15rem, 52vw, 34rem);
+    object-fit: cover;
+  }
+
+  .banner .textoSlide{
+    inset: 0;
+    width: 100%;
+    padding: 1rem 1.25rem 1rem 3.5rem;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .banner .textoSlide h1{
+    left: 0;
+    width: auto;
+    height: auto;
+    margin: 0;
+    line-height: 1;
+    font-size: clamp(2.4rem, 9vw, 6rem);
+  }
+  .banner .textoSlide span{
+    width: auto;
+    margin-left: 0;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    font-size: clamp(1.8rem, 7vw, 4.8rem);
+  }
+  .banner .textoSlide .futuro{
+    position: static;
+    margin: .25rem 0 0 .5rem;
+    line-height: 1;
+    font-size: clamp(2rem, 7.6vw, 5rem);
+  }
+
+  .banner .ElasBanner{
+    width: min(31rem, calc(100% - 4.5rem));
+    height: auto;
+    top: 50%;
+    left: 3.5rem;
+    transform: translateY(-50%);
+    padding: 1rem 1.2rem;
+    border-radius: 0 2rem 2rem 2rem;
+  }
+  .banner .ElasBanner p{
+    margin: 0;
+    font-size: clamp(.95rem, 3.8vw, 1.5rem);
+    text-align: left;
+    line-height: 1.35;
+  }
+
+  .banner .carousel-inner .carousel-control-prev,
+  .banner .carousel-control-prev{
+    top: 0; bottom: 0; left: 0; right: auto;
+    width: 12%;
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  .banner .carousel-inner .carousel-control-next,
+  .banner .carousel-control-next{
+    top: 0; bottom: 0; right: 0; left: auto;
+    width: 12%;
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  .femdesta{
+    display: block;
+    height: auto;
+    padding: 2rem 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .femdesta .femdestacadas{
+    display: grid;
+    grid-template-columns: minmax(0, 36%) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
+  .femdesta img{
+    float: none;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 7;
+    margin: 0;
+  }
+  .femdesta article{ padding: 0; }
+  .femdesta article h1{
+    margin: 0 0 1rem;
+    font-size: clamp(2.2rem, 5.5vw, 3.5rem);
+  }
+  .femdesta article p{
+    width: 100%;
+    font-size: clamp(1rem, 2.1vw, 1.35rem);
+    line-height: 1.6;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  .femdesta article .BtnDivFemDestaque{
+    margin: 1.25rem 0 0 auto;
+    min-height: 48px;
+  }
+
+  #QuemSomos{ padding: 0 1rem; }
+  .divP{ width: 100%; padding: 1.5rem 1.25rem; }
+  .VidBody{ max-width: min(100%, 48rem); }
+  .QuemAside p{
+    width: 100%;
+    font-size: clamp(1rem, 2.2vw, 1.5rem);
+    line-height: 1.6;
+    letter-spacing: 0;
+    text-align: left;
+  }
+  .QuemAside .titulo{
+    margin: 1.25rem 0;
+    font-size: clamp(1.6rem, 6vw, 3rem);
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  footer{ padding-bottom: calc(1.25rem + env(safe-area-inset-bottom)); }
+}
+
+
+
+@media (max-width: 1100px){
+  .placeholders{
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 0;
+    padding: 2rem 1rem;
+    margin: 3rem 0;
+    gap: 1.5rem;
+  }
+  .placeholders .card{
+    flex: 1 1 16rem;
+    width: auto;
+    max-width: 24rem;
+    border-radius: 1.5rem;
+  }
+}
+
+
+@media (max-width: 900px){
+  .femdesta .femdestacadas{
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .femdesta img{ width: min(100%, 22rem); margin: 0 auto; }
+  .femdesta article h1{ text-align: center; }
+  .femdesta article .BtnDivFemDestaque{
+    width: min(100%, 16rem);
+    margin: 1.25rem auto 0;
+  }
+}
+
+
+
+@media (max-width: 480px){
+  .placeholders{ margin: 2rem 0; }
+  .placeholders .card{ max-width: 100%; }
+
+  .placeholders .dialog,
+  .placeholders #dialog2,
+  .placeholders #dialog3{ padding: 1.25rem; }
+
+  .placeholders .dialog p{ font-size: .98rem; text-align: left; }
+
+  .placeholders .dialog #BtnFechar,
+  .placeholders .dialog #BtnFechar2,
+  .placeholders .dialog #BtnFechar3{
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .divP{ border-radius: 2.5rem .5rem 2.5rem .5rem; }
+}
+
+
+@media (max-width: 360px){
+  html{ font-size: 15px; }
+  .menu-toggle{ width: 44px; height: 44px; }
+  .femdesta{ padding: 1.5rem 1rem; }
+  .placeholders{ padding: 1.5rem .75rem; }
+}
+@media (max-width: 320px){
+  html{ font-size: 14px; }
+}
+
+
+
+@media (max-height: 520px) and (orientation: landscape){
+  header{ min-height: 3.5rem; }
+  header .links{
+    max-height: calc(100vh - 3.5rem);
+    max-height: calc(100dvh - 3.5rem);
+  }
+  .banner img{ height: min(34rem, 82vh); }
+  .femdesta{ padding: 1.5rem; }
+  .placeholders .dialog,
+  .placeholders #dialog2,
+  .placeholders #dialog3{ max-height: 92vh; }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!----> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Esteban&family=Great+Vibes&family=Holtwood+One+SC&family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Great+Vibes&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsivo.css">
+        <title>FemBIo</title>
+</head>
+<body>
+    <header>
+  <h1 class="logo">
+    FEM<span>BIO</span>
+  </h1>
+
+  <!-- Botão Hambúrguer adicionado para telas pequenas -->
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+    ☰
+  </button>
+
+  <div class="links" id="menuLinks">
+    <ul>
+      <li><a href="#QuemSomos">Quem Somos</a></li>
+      <li><a href="#">Outras Mulheres</a>
+        <ul>
+          <li><a href="#placeholders">Camila Achutti</a></li>
+          <li><a href="#placeholders">Sonia Guimaraes</a></li>
+          <li><a href="#placeholders">Jaqueline Mesquita</a></li>
+        </ul>
+      </li>
+      <li><a href="./pages/SobreProjeto/Projeto.html">Sobre o Projeto</a></li>
+      <li><a href="./pages/soluções/Solução.html">Soluçoes</a></li>
+    </ul>
+  </div>
+</header>
+         
+         <section class="banner">
+           <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+             
+             <div class="carousel-inner" >
+               
+               <div class="carousel-item active" >
+                 <img src="./imgs/ada2.png" class="d-block w-100" alt="jujupaes"  >
+                 <div class="textoSlide">
+                 <h1>Elas </h1><span>Programaram</span><h2 class="futuro"> o futuro</h2>
+               </div>
+                </div>
+                
+                <div class="carousel-item"  >
+                  <img src="./imgs/banners2.png" class="d-block w-100" alt="..." >
+                  <div class="ElasBanner">
+                    <p>Venha conhecer sobre outras mulheres importantes para a história do nosso universo da computaçao</p>
+                  
+                  </div>
+                </div>
+                
+                <div class="carousel-item" >
+            <img src="./imgs/banners3.png" class="d-block w-100" alt="..." >
+            <div class="QuemSomosNos">
+            </div>
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        
+        
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </section>
+      <section class="femdesta">
+        <div class="femdestacadas">
+          <img src="./imgs/adalove.png" alt="ada" id="imgada">
+        <article>
+          <h1>Ada<span>Lovelace</span></h1>
+          <p>Ada Lovelace (1815–1852) foi uma matemática e escritora inglesa, conhecida por suas contribuições pioneiras para a computação. 
+            Filha do famoso poeta Lord Byron, Ada recebeu uma educação voltada para a matemática e as ciências, áreas que despertaram seu grande interesse desde jovem.
+             Ela trabalhou em parceria com o matemático Charles Babbage, estudando sua proposta para a Máquina Analítica, considerada um dos primeiros projetos de um computador.
+              Em suas anotações, Ada criou um algoritmo para ser processado pela máquina, sendo frequentemente considerada a primeira programadora da história. Seu trabalho foi muito importante para o desenvolvimento das ideias que, décadas depois, ajudariam a formar a base da programação de computadores.</p>
+              <button class="BtnDivFemDestaque" id="BtnDivFemDestaque"><a> Saiba Mais</a></button>
+            </article>
+        </div>
+      </section>
+      <section class="placeholders" id="placeholders">
+        
+        <div class="card">
+  <img src="./imgs/Camila2.png" class="card-img-top" alt="...">
+
+  <div class="card-body">
+    <h5 class="card-title">Camila Achutti</h5>
+    <p class="card-text">Camila Achutti é uma cientista da computação e empreendedora brasileira referenciada mundialmente pela inclusão de gênero e democratização da tecnologia. </p>
+    <button class="btn btn-primary" id="BtnCard">Saiba Mais</button>
+      <dialog id="dialog" class="dialog">
+        <h1>Camila<span>Achutti</span></h1>
+        <p>Camila Achutti é uma cientista da computação e empreendedora brasileira referenciada mundialmente pela inclusão de gênero e democratização da tecnologia. 
+               Única mulher em sua turma de graduação na USP, criou o portal Mulheres na Computação para atrair o público feminino à área. 
+               Fundou a Mastertech, escola de educação digital corporativa, e a ONG SOMAS, focada na capacitação de jovens vulneráveis. 
+               Foi a primeira latina a receber o prêmio internacional Women of Vision e eleita uma das brasileiras que constroem o futuro, 
+               transformando a tecnologia em ferramenta de mobilidade social e igualdade..</p>
+        <p>Camila Achutti foi listada pelo jornal O Globo em 2026 como uma das 101 brasileiras que constroem o futuro..</p>
+        <button id="BtnFechar">Fechar</button>
+    </dialog>
+  </div>
+</div>
+        <div class="card">
+  <img src="./imgs/Sonia.png" class="card-img-top" alt="...">
+
+  <div class="card-body">
+    <h5 class="card-title">Sonia Guimaraes</h5>
+    <p class="card-text">Sonia Guimarães é uma física e professora do ITA que fez história como a primeira mulher negra a se doutorar em Física no Brasil e uma das principais vozes pela inclusão e diversidade na ciência.</p>
+    <button class="btn btn-primary" id="BtnCard2">Saiba Mais</button>
+    <dialog id="dialog2" class="dialog">
+        <h1>Sonia <span>Guimaraes</span></h1>
+        <p>Sonia Guimarães é uma física, pesquisadora e professora universitária brasileira, reconhecida por seu pioneirismo na ciência. 
+          Em 1989, tornou-se a primeira mulher negra brasileira a obter doutorado em Física. 
+          Em 1993, tornou-se a primeira professora negra do Instituto Tecnológico de Aeronáutica (ITA).
+           Suas pesquisas são voltadas para semicondutores, microeletrônica e sensores infravermelhos.
+           Além de sua carreira científica, luta pela inclusão de mulheres e pessoas negras nas áreas de ciência e tecnologia.</p>
+        <button id="BtnFechar2">Fechar</button>
+    </dialog>
+  </div>
+</div>
+        <div class="card">
+  <img src="./imgs/Jaqueline.jpg" class="card-img-top" alt="...">
+
+  <div class="card-body">
+    <h5 class="card-title">Jaqueline Mesquita</h5>
+    <p class="card-text">Jaqueline Mesquita é uma matemática e pesquisadora brasileira de destaque internacional, amplamente reconhecida por sua liderança acadêmica. </p>
+    <button class="btn btn-primary" id="BtnCard3">Saiba Mais</button>
+    <dialog id="dialog3" class="dialog">
+        <h1>Jaqueline <span>Mesquita</span></h1>
+        <p>Jaqueline Mesquita é uma matemática e pesquisadora brasileira de destaque internacional, amplamente reconhecida por sua liderança acadêmica. 
+          Professora do Departamento de Matemática da Universidade de Brasília, ela dedica sua carreira à pesquisa em equações diferenciais e análise funcional, áreas 
+          fundamentais para entender fenômenos que mudam ao longo do tempo. Além de suas contribuições científicas, tornou-se presidente da Sociedade Brasileira de 
+          Matemática e ocupa posições em importantes comitês internacionais, atuando fortemente na divulgação científica e no incentivo à presença de mulheres no meio 
+          acadêmico e nas ciências exatas.</p>
+        <button id="BtnFechar3">Fechar</button>
+    </dialog>
+  </div>
+  
+    </section><br><br><br>
+     <br>
+
+      <section id="QuemSomos">
+        <div class="divP">
+        <div class="VidBody">
+         <video autoplay loop muted playsinline controls>
+            <source src="video/VideoInfoB.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="QuemAside"></div>
+          <aside class="QuemAside">
+            <p class="titulo">   Sobre Nossa Turma 2º Info B</p>
+            <p> A turma do 2º Ano Info B da FAETEC destaca-se por usar o aprendizado técnico em informática como ferramenta de transformação social, 
+              combinando união, criatividade e pensamento crítico. Em seu projeto de maior destaque, os alunos desenvolveram um site dedicado a combater o preconceito 
+              de gênero e dar visibilidade às mulheres na TI. A iniciativa resgata os legados de pioneiras como Ada Lovelace, Grace Hopper e Hedy Lamarr e confronta a 
+              disparidade do mercado brasileiro  onde elas ocupam apenas 34% das vagas do setor , defendendo que a diversidade é essencial para impulsionar a inovação. 
+              Com essa ação, a turma reafirma sua excelência técnica e seu compromisso em construir um futuro mais justo para a tecnologia.
+            </p>
+          </aside>
+        </div>
+      </div>
+      </section>
+      <br><br>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+ <script src="scripts.js" ></script>
+ <script src="menu-mobile.js" ></script>
+
+ <footer>
+  <p>© 2026 FemBio. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
+     
