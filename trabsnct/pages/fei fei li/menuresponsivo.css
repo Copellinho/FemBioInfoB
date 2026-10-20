@@ -1,0 +1,48 @@
+#bt_menu {
+    display: none;
+}
+
+.botao-menu {
+    display: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 14px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+}
+
+@media (max-width: 800px) {
+    .topo {
+        min-height: 70px;
+        flex-wrap: wrap;
+        padding: 15px 0;
+        gap: 12px;
+    }
+
+    .botao-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding-top: 10px;
+    }
+
+    .menu a {
+        display: block;
+        padding: 13px 10px;
+        border-top: 1px solid #263449;
+    }
+
+    #bt_menu:checked ~ .menu {
+        display: flex;
+        animation: aparecer 0.25s ease;
+    }
+}

@@ -1,0 +1,215 @@
+:root{
+  --preto:#08040a;
+  --surface:#111014;
+  --surface-2:#18131f;
+  --borda:#2b0a45;
+  --roxo:#7700DF;
+  --roxo-header:#6A0EAB;
+  --roxo-logo:#3c006d;
+  --lilas:#d092ff;
+  --magenta:#ff49d8;
+  --branco:#fff;
+  --cinza:#b8b8b8;
+  --cinza-claro:#f4f3f9;
+  --texto:#e6e1ee;
+  --serif:"Fraunces", Georgia, serif;
+  --sans:"Hanken Grotesk", system-ui, sans-serif;
+}
+
+*{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; }
+.container{
+  width:100%;
+  max-width:1060px;
+  margin:0 auto;
+  padding:0 1.5rem;
+}
+ 
+/* ---------- Botão voltar ---------- */
+.topo{ padding-top:1.5rem; }
+ 
+.botao-voltar{
+  display:inline-block;
+  padding:.6rem 1.2rem;
+  border:1px solid var(--roxo);
+  border-radius:999px;
+  background:var(--roxo-logo);
+  color:var(--branco);
+  font-weight:600;
+  font-size:.95rem;
+  text-decoration:none;
+  transition:background .2s ease, border-color .2s ease;
+  margin-right: auto;
+}
+.botao-voltar:hover{
+  background:var(--roxo);
+  border-color:var(--lilas);
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  color:var(--texto);
+  font-family:var(--sans);
+  line-height:1.7;
+  background:
+    radial-gradient(ellipse 70% 40% at 50% 0%, rgba(119,0,223,.28), transparent 70%),
+    var(--preto);
+}
+
+.container{
+  width:100%;
+  max-width:1060px;
+  margin:0 auto;
+  padding:0 1.5rem;
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  padding:5rem 0 3rem;
+  text-align:center;
+}
+.hero .container{ max-width:820px; }
+
+h1{
+  margin:0 0 1.5rem;
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:clamp(2.2rem, 6vw, 4rem);
+  line-height:1.1;
+  letter-spacing:-.02em;
+  color:var(--branco);
+  text-wrap:balance;
+}
+.hero p{
+  max-width:60ch;
+  margin:0 auto;
+  font-size:1.2rem;
+  color:var(--cinza);
+  text-align:center;
+}
+
+/* ---------- Textos ---------- */
+h2{
+  margin:0 0 .75rem;
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:1.5rem;
+  line-height:1.25;
+  color:var(--lilas);
+}
+p{
+  margin:0 0 1rem;
+  font-size:1.05rem;
+  font-weight:300;
+  color:var(--texto);
+}
+p:last-child{ margin-bottom:0; }
+strong{ color:var(--branco); font-weight:600; }
+em{ color:var(--lilas); }
+code{
+  padding:.1em .45em;
+  border-radius:6px;
+  background:var(--roxo-logo);
+  color:var(--branco);
+  font-size:.9em;
+}
+
+/* ---------- Layout ---------- */
+main{ flex:1; padding-bottom:4rem; }
+
+.intro{
+  max-width:720px;
+  margin:0 auto 3.5rem;
+}
+.intro h2{ font-size:2rem; }
+.intro p{ font-size:1.15rem; }
+
+.grade{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:1.5rem;
+}
+
+section.cartao{
+  background:var(--surface);
+  border:1px solid var(--borda);
+  border-radius:14px;
+  padding:1.75rem;
+  transition:border-color .2s ease;
+}
+section.cartao:hover{ border-color:var(--roxo); }
+
+/* O Primeiro Algoritmo ganha destaque: é o marco da história */
+section.destaque{
+  grid-column:1 / -1;
+  background:linear-gradient(135deg, var(--roxo-logo), var(--surface) 70%);
+  border-color:var(--roxo-header);
+  padding:2.25rem;
+}
+section.destaque h2{ font-size:1.9rem; color:var(--branco); }
+section.destaque p{ max-width:70ch; font-size:1.15rem; }
+
+/* ---------- Linha do tempo ---------- */
+.linha-tempo{
+  grid-column:1 / -1;
+}
+.linha-tempo ol{
+  position:relative;
+  margin:1.5rem 0 0;
+  padding:0 0 0 1.75rem;
+  list-style:none;
+}
+.linha-tempo ol::before{
+  content:"";
+  position:absolute;
+  left:5px; top:.5rem; bottom:.5rem;
+  width:2px;
+  background:linear-gradient(to bottom, var(--magenta), var(--roxo));
+}
+.linha-tempo li{
+  position:relative;
+  padding:0 0 1.1rem 1rem;
+  font-weight:300;
+}
+.linha-tempo li:last-child{ padding-bottom:0; }
+.linha-tempo li::before{
+  content:"";
+  position:absolute;
+  left:-1.75rem; top:.6rem;
+  width:12px; height:12px;
+  border-radius:50%;
+  background:var(--preto);
+  border:2px solid var(--magenta);
+}
+.linha-tempo li strong{
+  margin-right:.5rem;
+  font-family:var(--serif);
+  font-size:1.15rem;
+  color:var(--magenta);
+}
+
+/* ---------- Rodapé ---------- */
+footer{
+  padding:1.25rem;
+  text-align:center;
+  color:var(--branco);
+  background:linear-gradient(to bottom, var(--roxo), var(--borda));
+  opacity:.6;
+  font-size:.9rem;
+}
+
+/* ---------- Acessibilidade e responsivo ---------- */
+:focus-visible{ outline:2px solid var(--magenta); outline-offset:3px; }
+
+@media (max-width:760px){
+  .hero{ padding:3.5rem 0 2rem; }
+  .grade{ grid-template-columns:1fr; }
+  section.destaque{ padding:1.75rem; }
+}
+@media (prefers-reduced-motion:reduce){
+  *{ transition:none !important; scroll-behavior:auto !important; }
+}
